@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- BOOTSTRAP CDNs -->
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/4409b2c857.js" crossorigin="anonymous"></script>
+    
+    <style>
+        nav ul{
+            list-style-type: none;
+            text-align: right;
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+        nav li{
+            display: inline-block;
+            padding-right: 20px;
+            padding-top: 20px; 
+        }
+
+        nav a{
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }       
+
+        nav a:hover{
+            text-decoration: underline;
+        }
+        .header {
+            color: black;
+            font-size: 27px;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .bigicon {
+            font-size: 35px;
+            color: black;
+            padding-left:3%;
+        }
+        form div{
+            display:inline-block;
+            width: 90%;
+        }
+        button.btn{             
+            display: block;
+            margin: 0 auto;
+        }
+        .nav li.active > a{
+            text-decoration: underline;
+        }
+
+        .skip a{
+            background: white;
+            left: 0;
+            padding: 6px;
+            position: absolute;
+            top: -40px; 
+            -webkit-transition: top 1s ease-out;
+            transition: top 1s ease-out;
+            z-index: 1;
+
+        }
+
+        .skip a:focus{ 
+            position: absolute;
+            top: 0;
+
+        }
+
+        a:focus{ 
+            border: 2px solid black;
+
+        }
+
+
+
+</style>
+</head>
+<body>
+    <div class="skip"><a href="#fname">Skip to Main Content</a></div>
+  
+<!-- http://www.prepbootstrap.com/bootstrap-template/contact-form -->
+<main>
+<div class="nav">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li class =active><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+<form class="form-horizontal" method="post">
+<form action="https://formspree.io/mrggpaey" method="POST">
+    <fieldset>
+        <legend class="text-center header"><h1>Contact</h1></legend>
+
+        <div class="form-group">
+            <span><i class="fa fa-user bigicon"></i></span>
+            <div>
+                <input id="fname" name="name" type="text" placeholder="First Name" class="form-control" aria-label="first name text field">
+            </div>
+        </div>
+        <div class="form-group">
+            <span><i class="fa fa-user bigicon"></i></span>
+            <div>
+                <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <span><i class="fa fa-paper-plane bigicon"></i></span>
+            <div>
+                <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <span><i class = "fas fa-pencil-alt bigicon"></i></span>
+            <div>
+                <textarea class="form-control" id="message" name="message" placeholder="Enter your message here."></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div>
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+</main>
+</body>
+            

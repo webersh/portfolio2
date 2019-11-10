@@ -1,0 +1,271 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: #ffffff;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding-left: 5px;
+  padding-bottom: 50px;
+  text-align: left;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+  text-align: left;
+
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+nav li{
+	display: inline-block;
+	padding-right: 20px;
+  padding-top: 20px; 
+}
+
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none; 
+}
+
+nav a:hover{
+  text-decoration: underline;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px; 
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+
+}
+
+.skip a:focus{ 
+	position: absolute;
+	top: 0;
+
+}
+
+a:focus{ 
+	border: 2px solid black;
+
+}
+
+.nav li.active > a{
+  text-decoration: underline;
+
+}
+
+footer{
+  color: black;
+  grid-column: 1 / -1;
+  grid-row: 7 / span 1;   
+  padding-top: 30px;
+  text-align: center;
+}
+
+
+.container{
+
+  display: grid;
+  grid-template-columns: 100px 500px 100px; 
+  grid-row-gap: 15px;
+  grid-template-rows: 30px auto auto auto auto auto 100px; 
+  width: 100vw; 
+}
+
+.nav{
+   
+   align-self: center;
+   grid-column: 1/-1;
+   grid-row: 1/ span 1;
+   padding: 30px 10px; 
+   text-align: left; 
+}
+
+header{
+ 
+  grid-column: 1/-1;
+  grid-row: 2/ span 1;
+}
+
+header p{
+  color: black;
+  font-size: 24px;
+  padding-left: 5px;
+  grid-column: 1/ -1;
+  grid-row: 3/span 1;
+  margin: auto;
+}
+
+.gather-requirements{
+  grid-column: 1/ -1;
+  grid-row: 3/ span 1;
+  padding-left: 30px;
+}
+
+.brainstorm{
+
+  grid-column: 1/ -1; 
+  grid-row: 5/ span 1;
+  padding-left: 30px;
+  
+}
+
+.validate{
+  grid-column: 1/-1;
+  grid-row: 6/ span 1;
+  padding-left: 30px;
+}
+
+@media screen and (min-width: 500px){
+
+.container{
+
+  display: grid;
+  grid-template-columns: 100px 500px 100px; 
+  grid-row-gap: 15px;
+  grid-template-rows: 30px auto auto auto auto auto 100px; 
+  width: 100vw; 
+}
+
+.nav{
+   
+   align-self: center;
+   grid-column: 1/-1;
+   grid-row: 1/ span 1;
+   padding: 30px 10px; 
+   text-align: left; 
+}
+
+header{
+ 
+  grid-column: 1/-1;
+  grid-row: 2/ span 1;
+}
+
+header p{
+  color: black;
+  font-size: 24px;
+  grid-column: 1/ -1;
+  grid-row: 3/span 1;
+  margin: auto;
+}
+
+.gather-requirements{
+  grid-column: 1/ -1;
+  grid-row: 3/ span 1;
+  padding-left: 30px;
+}
+
+
+.brainstorm{
+
+  grid-column: 1/ -1; 
+  grid-row: 5/ span 1;
+  padding-left: 30px;
+  
+}
+
+.validate{
+  grid-column: 1/-1;
+  grid-row: 6/ span 1;
+  padding-left: 30px;
+}
+}
+
+
+@media screen and (min-width: 800px){
+
+.container{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-row-gap: 15px;
+  grid-template-rows: 30px auto auto auto auto 100px; 
+  width: 100vw; 
+}
+
+.nav{
+   
+   align-self: center;
+   grid-column: 1/-1;
+   grid-row: 1/ span 1;
+   padding: 30px 10px; 
+   text-align: right; 
+}
+
+header{
+ 
+  grid-column: 1/-1;
+  grid-row: 2/ span 1;
+}
+
+header p{
+  color: black;
+  font-size: 24px;
+  grid-column: 1/ -1;
+  grid-row: 3/span 1;
+  margin: auto;
+}
+
+.gather-requirements{
+  grid-column: 1/ span 1;
+  grid-row: 3/ span 1;
+  padding-left: 30px;
+  padding-top: 50px;
+}
+
+.brainstorm{
+
+  grid-column: 2/ span 1; 
+  grid-row: 4/ span 1;
+  
+}
+
+.validate{
+  grid-column: 3/span 1;
+  grid-row: 5/ span 1;
+  padding-right: 30px;
+ 
+}
+}
+
+@media screen and (prefers-reduced-motion: reduce)
+{
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none; /* Your code here - set to default setting */
+    transition: none; /* Your code here - set to default setting */
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+}
